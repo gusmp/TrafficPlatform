@@ -1,0 +1,91 @@
+Monitor
+-------
+http://localhost:9090/monitor/test
+
+
+List video sources
+-------------------
+
+http://localhost:9090/vs/list
+
+
+CRUD video sources
+-------------------
+
+http://localhost:9090/vs/save
+http://localhost:9090/vs/update
+http://localhost:9090/vs/delete/ZONA6
+
+Enable / disable video source
+-----------------------------
+
+http://localhost:9090/vs/enableVideoSource/ZONA4/true
+http://localhost:9090/vs/enableVideoSource/ZONA6/true
+
+Get video from images
+---------------------
+http://localhost:9090/video/getFrames/ZONA4/20210424202200/20210424202500
+http://localhost:9090/video/getFrames/ZONA4/20210420132800/20210420133900/2
+http://localhost:9090/video/getFrames/ZONA4/20210420132800/20210420133900/2/800/600
+http://localhost:9090/video/getFrames/ZONA5/20210426162000/20210426162200/2/800/600
+
+http://localhost:9090/video/getVideo/ZONA4/20210424202200/20210424202500
+http://localhost:9090/video/getVideo/ZONA4/20210424202200/20210424202500/2
+http://localhost:9090/video/getVideo/ZONA4/20210424202200/20210424202500/2/800/600
+http://localhost:9090/video/getVideo/ZONA5/20210426162000/20210426162200/2/800/600
+
+Activate / deactivate save video to disk
+----------------------------------------
+http://localhost:9090/video/enableSaveVideo/ZONA4/true
+http://localhost:9090/video/enableSaveVideo/ZONA4/false
+
+http://localhost:9090/video/enableSaveVideo/ZONA6/true
+http://localhost:9090/video/enableSaveVideo/ZONA6/false
+
+Get current video
+-----------------
+
+http://localhost:9090/video/currentVideo/ZONA4
+http://localhost:9090/video/currentVideo/ZONA5
+
+Get current image
+-----------------
+http://localhost:9090/video/currentImage/ZONA4
+http://localhost:9090/video/currentImage/ZONA6
+
+Delete data
+-----------
+http://localhost:9090/video/delete/ZONA4/20210424202000/20210424202200 
+
+
+Consolidate video
+-----------------
+
+http://localhost:9090/consolidate/consolidate/ZONA4/20210424202200/20210424202500
+http://localhost:9090/consolidate/consolidate/ZONA6/20210426123800/20210426124000
+http://localhost:9090/consolidate/consolidate/ZONA5/20210426162000/20210426162200
+
+Get list consolidated videos
+----------------------------
+http://localhost:9090/consolidate/list/
+http://localhost:9090/consolidate/list/ZONA4
+
+Get consolidated video
+----------------------
+
+http://localhost:9090/consolidate/getFrames/ZONA4/20210424202200/20210424202500
+http://localhost:9090/consolidate/getFrames/ZONA4/20210424202200/20210424202500/2
+http://localhost:9090/consolidate/getFrames/ZONA4/20210424202200/20210424202500/2/800/600
+http://localhost:9090/consolidate/getFrames/ZONA5/20210426162000/20210426162200
+http://localhost:9090/consolidate/getFrames/ZONA5/20210426162000/20210426162200/2/800/600
+
+http://localhost:9090/consolidate/getVideo/ZONA5/20210426162000/20210426162200
+http://localhost:9090/consolidate/getVideo/ZONA5/20210426162000/20210426162200/2/800/600
+
+http://localhost:9090/consolidate/getFrames/ZONA6/20210426123800/20210426124000
+
+
+Save images with FFMPEG
+-----------------------
+
+ffmpeg -i <url> -r 1/1 <base_name>_%03d.bmp

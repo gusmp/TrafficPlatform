@@ -1,0 +1,4 @@
+CREATE DATABASE `<DATA BASE NAME>` CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+
+show databases;
+drop database <DATA BASE NAME>;

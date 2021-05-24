@@ -1,0 +1,273 @@
+{
+    "data": {
+        "vehicles": [
+            {
+                "plate": {
+                    "bgColor": {
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "color": {
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "confidence": 44,
+                    "country": "ESP",
+                    "plateChars": [
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 77,
+                                    "y": 420
+                                },
+                                "bottomRight": {
+                                    "x": 84,
+                                    "y": 420
+                                },
+                                "topLeft": {
+                                    "x": 77,
+                                    "y": 409
+                                },
+                                "topRight": {
+                                    "x": 84,
+                                    "y": 409
+                                }
+                            },
+                            "code": 54,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 93
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 86,
+                                    "y": 420
+                                },
+                                "bottomRight": {
+                                    "x": 92,
+                                    "y": 420
+                                },
+                                "topLeft": {
+                                    "x": 86,
+                                    "y": 409
+                                },
+                                "topRight": {
+                                    "x": 92,
+                                    "y": 409
+                                }
+                            },
+                            "code": 50,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 95
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 94,
+                                    "y": 421
+                                },
+                                "bottomRight": {
+                                    "x": 101,
+                                    "y": 421
+                                },
+                                "topLeft": {
+                                    "x": 94,
+                                    "y": 410
+                                },
+                                "topRight": {
+                                    "x": 101,
+                                    "y": 410
+                                }
+                            },
+                            "code": 54,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 97
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 102,
+                                    "y": 422
+                                },
+                                "bottomRight": {
+                                    "x": 110,
+                                    "y": 422
+                                },
+                                "topLeft": {
+                                    "x": 102,
+                                    "y": 411
+                                },
+                                "topRight": {
+                                    "x": 110,
+                                    "y": 411
+                                }
+                            },
+                            "code": 48,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 97
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 116,
+                                    "y": 422
+                                },
+                                "bottomRight": {
+                                    "x": 123,
+                                    "y": 422
+                                },
+                                "topLeft": {
+                                    "x": 116,
+                                    "y": 412
+                                },
+                                "topRight": {
+                                    "x": 123,
+                                    "y": 412
+                                }
+                            },
+                            "code": 74,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 94
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 125,
+                                    "y": 423
+                                },
+                                "bottomRight": {
+                                    "x": 132,
+                                    "y": 423
+                                },
+                                "topLeft": {
+                                    "x": 125,
+                                    "y": 412
+                                },
+                                "topRight": {
+                                    "x": 132,
+                                    "y": 412
+                                }
+                            },
+                            "code": 67,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 98
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 134,
+                                    "y": 423
+                                },
+                                "bottomRight": {
+                                    "x": 141,
+                                    "y": 423
+                                },
+                                "topLeft": {
+                                    "x": 134,
+                                    "y": 412
+                                },
+                                "topRight": {
+                                    "x": 141,
+                                    "y": 412
+                                }
+                            },
+                            "code": 86,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 98
+                        }
+                    ],
+                    "plateROI": {
+                        "bottomLeft": {
+                            "x": 66,
+                            "y": 421
+                        },
+                        "bottomRight": {
+                            "x": 146,
+                            "y": 425
+                        },
+                        "topLeft": {
+                            "x": 66,
+                            "y": 406
+                        },
+                        "topRight": {
+                            "x": 145,
+                            "y": 411
+                        }
+                    },
+                    "plateType": 128060,
+                    "proctime": 275,
+                    "state": "",
+                    "unicodeText": "6260JCV"
+                }
+            }
+        ]
+    },
+    "node": "3c1dabe1dd06",
+    "nodetime": 283,
+    "version": "1.0"
+}

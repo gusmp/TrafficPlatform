@@ -1,0 +1,288 @@
+{
+    "data": {
+        "vehicles": [
+            {
+                "mmr": {
+                    "category": "CAR",
+                    "categoryConfidence": 79,
+                    "color": {
+                        "b": 128,
+                        "g": 128,
+                        "r": 128
+                    },
+                    "colorConfidence": 100,
+                    "make": "Mercedes",
+                    "makeAndModelConfidence": 79,
+                    "model": "A-Class",
+                    "proctime": 34,
+                    "subModel": ""
+                },
+                "plate": {
+                    "bgColor": {
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "color": {
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "confidence": 51,
+                    "country": "ESP",
+                    "plateChars": [
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 77,
+                                    "y": 419
+                                },
+                                "bottomRight": {
+                                    "x": 84,
+                                    "y": 419
+                                },
+                                "topLeft": {
+                                    "x": 77,
+                                    "y": 408
+                                },
+                                "topRight": {
+                                    "x": 83,
+                                    "y": 409
+                                }
+                            },
+                            "code": 54,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 92
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 86,
+                                    "y": 420
+                                },
+                                "bottomRight": {
+                                    "x": 92,
+                                    "y": 420
+                                },
+                                "topLeft": {
+                                    "x": 86,
+                                    "y": 409
+                                },
+                                "topRight": {
+                                    "x": 92,
+                                    "y": 409
+                                }
+                            },
+                            "code": 50,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 93
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 94,
+                                    "y": 421
+                                },
+                                "bottomRight": {
+                                    "x": 101,
+                                    "y": 421
+                                },
+                                "topLeft": {
+                                    "x": 94,
+                                    "y": 410
+                                },
+                                "topRight": {
+                                    "x": 101,
+                                    "y": 410
+                                }
+                            },
+                            "code": 54,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 83
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 102,
+                                    "y": 421
+                                },
+                                "bottomRight": {
+                                    "x": 110,
+                                    "y": 421
+                                },
+                                "topLeft": {
+                                    "x": 102,
+                                    "y": 410
+                                },
+                                "topRight": {
+                                    "x": 110,
+                                    "y": 411
+                                }
+                            },
+                            "code": 48,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 97
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 116,
+                                    "y": 422
+                                },
+                                "bottomRight": {
+                                    "x": 122,
+                                    "y": 422
+                                },
+                                "topLeft": {
+                                    "x": 116,
+                                    "y": 412
+                                },
+                                "topRight": {
+                                    "x": 122,
+                                    "y": 412
+                                }
+                            },
+                            "code": 74,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 93
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 125,
+                                    "y": 423
+                                },
+                                "bottomRight": {
+                                    "x": 132,
+                                    "y": 423
+                                },
+                                "topLeft": {
+                                    "x": 125,
+                                    "y": 412
+                                },
+                                "topRight": {
+                                    "x": 132,
+                                    "y": 412
+                                }
+                            },
+                            "code": 67,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 96
+                        },
+                        {
+                            "bgColor": {
+                                "b": 255,
+                                "g": 255,
+                                "r": 255
+                            },
+                            "charROI": {
+                                "bottomLeft": {
+                                    "x": 135,
+                                    "y": 423
+                                },
+                                "bottomRight": {
+                                    "x": 141,
+                                    "y": 424
+                                },
+                                "topLeft": {
+                                    "x": 135,
+                                    "y": 413
+                                },
+                                "topRight": {
+                                    "x": 141,
+                                    "y": 413
+                                }
+                            },
+                            "code": 86,
+                            "color": {
+                                "b": 0,
+                                "g": 0,
+                                "r": 0
+                            },
+                            "confidence": 97
+                        }
+                    ],
+                    "plateROI": {
+                        "bottomLeft": {
+                            "x": 67,
+                            "y": 420
+                        },
+                        "bottomRight": {
+                            "x": 144,
+                            "y": 426
+                        },
+                        "topLeft": {
+                            "x": 67,
+                            "y": 406
+                        },
+                        "topRight": {
+                            "x": 144,
+                            "y": 412
+                        }
+                    },
+                    "plateType": 128060,
+                    "proctime": 58,
+                    "state": "",
+                    "unicodeText": "6260JCV"
+                }
+            }
+        ]
+    },
+    "node": "3c1dabe1dd06",
+    "nodetime": 101,
+    "version": "1.0"
+}

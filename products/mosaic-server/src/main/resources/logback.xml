@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+	    <encoder>
+	      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+	    </encoder>
+  	</appender>
+  	
+  	<appender name="FILER"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./logs/mosaicserver.log</file>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			 <fileNamePattern>./logs/mosaicserver_%d{yyyy-MM-dd}.log</fileNamePattern>
+			 
+			 <!-- mantener un anyo -->
+			<maxHistory>365</maxHistory>
+		</rollingPolicy>
+		
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+		</encoder>
+		
+	</appender>
+	
+	<logger name="org.trafficplatform" level="DEBUG" additivity="false">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILER" />
+	</logger>
+	
+	<root level="INFO">
+		<appender-ref ref="STDOUT" additivity="false" />
+		<appender-ref ref="FILER" />
+	</root>
+
+</configuration>
