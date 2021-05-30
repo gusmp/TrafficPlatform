@@ -2,6 +2,7 @@ package org.trafficplatform.videoserver.service.video.capture;
 
 
 import java.io.File;
+import java.util.concurrent.locks.ReentrantLock;
 
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
@@ -21,6 +22,7 @@ public class VideoCaptureOpenCvImagesService extends VideoCaptureBase {
 
 	private VideoCapture videoCapture;
 	
+	private final ReentrantLock currentImageReady = new ReentrantLock(true);
 	private Mat currentImage;
 	
 	public VideoCaptureOpenCvImagesService(VideoSourceEntity videoSource, VideoSourcePoolService videoSourcePoolService) {
@@ -65,17 +67,33 @@ public class VideoCaptureOpenCvImagesService extends VideoCaptureBase {
 		
 		long numberFrames = 0;
 		long startTime = System.currentTimeMillis();
+		boolean readError = false;
 		
-		this.currentImage = new Mat();
+		this.currentImage = new Mat();	
 		
 		while(this.running.get()) {
 			
+			
+			currentImageReady.lock();
+			
 			this.videoCapture.read(this.currentImage);
 			numberFrames++;
+			readError = false;
 			
 			if ((this.currentImage.size().height == 0.0) || (this.currentImage.size().width == 0.0)) {
+				log.error(LogUtils.formatSourceName(this.videoSource.getName())  + "Error retreaving the image from source " + this.videoSource.getUrl());
+				
 				this.currentImage = ImageUtils.resize(errorImage, errorImageWidth, errorImageHeight);
+				readError = true;
+	
 			}
+			
+			currentImageReady.unlock();
+			
+			if (readError == true) {
+				try { Thread.sleep(errorDelayInMs); } catch(Exception exc) {}
+			}
+			
 			
 			if (this.videoSource.isEnableSaveVideo() == true) {
 				String n = fullPathImage( new File(this.videoSource.getRootCapturePath()) ).getAbsolutePath();
@@ -103,8 +121,12 @@ public class VideoCaptureOpenCvImagesService extends VideoCaptureBase {
 	@Override
 	public byte[] getCurrentImage() {
 		
+		currentImageReady.lock();
+		
 		MatOfByte currentImageMatOfByte = new MatOfByte();
 		Imgcodecs.imencode(".jpg", this.currentImage, currentImageMatOfByte);
+		
+		currentImageReady.unlock();
 		
 		byte[] currentImageByteArray = new byte[(int) (currentImageMatOfByte.total() * currentImageMatOfByte.channels())];
 		currentImageMatOfByte.get(0, 0, currentImageByteArray);

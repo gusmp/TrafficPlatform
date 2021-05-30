@@ -22,6 +22,9 @@ public abstract class VideoCaptureBase implements IVideoCapture {
 	@Value("${videoServer.errorImageHeight}")
 	protected Integer errorImageHeight;
 	
+	@Value("${videoServer.errorDelayInMs}")
+	protected long errorDelayInMs;
+	
 	protected VideoSourceEntity videoSource;
 	protected VideoSourcePoolService videoSourcePoolService;
 	protected AtomicBoolean running;

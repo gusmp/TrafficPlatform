@@ -10,6 +10,7 @@ import lombok.Setter;
 public class MosaicRequest {
 	
 	String name;
+	boolean displayName;
 	List<InputSourceRequest> inputSourceList;
 
 }

@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import lombok.Getter;
@@ -30,7 +31,7 @@ public class MosaicEntity {
 	@Size(min = 4)
 	private String name;
 	
-	@NotEmpty
+	@NotNull
 	private boolean displayName;
 	
 	@OneToMany(mappedBy = "mosaic", cascade = CascadeType.ALL)

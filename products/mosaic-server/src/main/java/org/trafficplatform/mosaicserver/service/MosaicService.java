@@ -66,7 +66,7 @@ public class MosaicService {
 		
 		MosaicEntity mosaicEntity = new MosaicEntity();
 		mosaicEntity.setName(mosaicRequest.getName());
-		
+		mosaicEntity.setDisplayName(mosaicRequest.isDisplayName());
 		
 		for(InputSourceRequest isr : mosaicRequest.getInputSourceList()) {
 		
