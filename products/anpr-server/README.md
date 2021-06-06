@@ -11,7 +11,7 @@ Anpr-server is not a real Anpr server. It is just a proxy to real anpr providers
 
 This module does not requies a database.
 
-**NOTE: ** The database section on *application-template.properties* is not used.
+**NOTE:** The database section on *application-template.properties* is not used.
 
 ## Basic configuration
 
