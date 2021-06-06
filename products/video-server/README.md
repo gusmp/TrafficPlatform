@@ -173,7 +173,7 @@ Example:
 
 
 
-### Get a/all video sources
+### Get one/all video sources
 
 #### Request header
 
@@ -362,7 +362,97 @@ Returns an mp3 video.
 
 ## Consolidate videos
 
+There might be times, when a video must be presered for a long time. Consolidate a video 'copy' the video in a diferent area which won't be delete by the regular remove old task. 
 
+In fact a video consolidated only can be delete using command line.
+
+### Consolidate a video
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/consolidate/VIDEO_SOURCE_NAME/start/end |
+| Type          | GET                                     |
+
+Where:
+
+* start: start timestamp in format YYYYMMDDhhMMss.
+* end: end timestamp in format YYYYMMDDhhMMss.
+
+#### Response body
+
+| Property      | Description  |
+| :------------ |:-------------|
+| success       | Boolean. True if the request was execute successfully or false if there was an error |
+| errorCode     | Integer. Code of error                |
+| message       | Text message of the operation         |
+
+### Get consolidated videos
+
+#### Request header
+
+| Property       | Value        |
+| :------------  |:-------------|
+| URL (all)      | http://SERVER_NAME:SERVER_PORT/consolidate/consolidate/list |
+| URL (filtered) | http://SERVER_NAME:SERVER_PORT/consolidate/consolidate/list/VIDEO_SOURCE_NAME |
+| Type          | GET                                     |
+
+#### Response body
+
+And array of consolidated videos. Each consolidated video contains the following properties:
+
+* id
+* video source name
+* start
+* end
+
+### Get video (frame stream)
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/getFrames/VIDEO_SOURCE_NAME/start/end |
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/getFrames/VIDEO_SOURCE_NAME/start/end/fps |
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/getFrames/VIDEO_SOURCE_NAME/start/end/fps/width/height |
+| Type          | GET                                     |
+
+Where:
+
+* start: start timestamp in format YYYYMMDDhhMMss.
+* end: end timestamp in format YYYYMMDDhhMMss.
+* fps: frame per second.
+* width: desired width.
+* height desired height.
+
+#### Response body
+
+Returns a *multipart/x-mixed-replace* response based on a sequence of jpeg images.
+
+
+### Get video (mp4 stream)
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/getVideo/VIDEO_SOURCE_NAME/start/end |
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/getVideo/VIDEO_SOURCE_NAME/start/end/fps |
+| URL           | http://SERVER_NAME:SERVER_PORT/consolidate/getVideo/VIDEO_SOURCE_NAME/start/end/fps/width/height |
+| Type          | GET                                     |
+
+Where:
+
+* start: start timestamp in format YYYYMMDDhhMMss.
+* end: end timestamp in format YYYYMMDDhhMMss.
+* fps: frame per second.
+* width: desired width.
+* height desired height.
+
+#### Response body
+
+Returns an mp3 video.
 
 
 

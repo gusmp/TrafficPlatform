@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import org.trafficplatform.videoserver.bean.DateVideoCaptureFormat;
 import org.trafficplatform.videoserver.bean.api.response.ConsolidateVideoResponse;
+import org.trafficplatform.videoserver.bean.api.response.GenericResponse;
 import org.trafficplatform.videoserver.service.video.consolidate.VideoConsolidateService;
 import org.trafficplatform.videoserver.utils.LogUtils;
 
@@ -88,7 +89,7 @@ public class VideoConsolidateController extends VideoBaseController {
 	
 	
 	@GetMapping("/consolidate/{sourceName}/{start}/{end}")
-	public String consolidateVideo(@PathVariable("sourceName") String sourceName, 
+	public GenericResponse consolidateVideo(@PathVariable("sourceName") String sourceName, 
 			@PathVariable("start") String start, 
 			@PathVariable("end") String end) {
 		
@@ -99,7 +100,8 @@ public class VideoConsolidateController extends VideoBaseController {
 				new DateVideoCaptureFormat(start), 
 				new DateVideoCaptureFormat(end));
 		
-		return "Consolidated Video. Number of frames: " + numberFrames;
+		return new GenericResponse("Consolidated Video. Number of frames: " + numberFrames);
+
 	}
 	
 	@GetMapping({"/list", "/list/{sourceName}"})
