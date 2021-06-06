@@ -15,7 +15,7 @@ This module does not requies a database.
 
 ## Basic configuration
 
-1. Duplicate the file *<YOUR_PATH>\TrafficPlatform\products\mosaic-server\src\main\resources\application-template.properties*. Example application-**myinst**.properties
+1. Duplicate the file *<YOUR_PATH>\TrafficPlatform\products\anpr-server\src\main\resources\application-template.properties*. Example application-**myinst**.properties
 
 2. Edit the file *application-myinst.properties*
 
