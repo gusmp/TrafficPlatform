@@ -340,7 +340,7 @@ Where:
 
 #### Response body
 
-Returns an mp3 video.
+Returns a mp3 video.
 
 
 ### Delete video
@@ -452,7 +452,7 @@ Where:
 
 #### Response body
 
-Returns an mp3 video.
+Returns a mp3 video.
 
 
 
