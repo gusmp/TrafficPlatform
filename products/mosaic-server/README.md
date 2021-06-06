@@ -33,7 +33,7 @@ You might want to create a specific user:
 
 ### Server port
 
-Default port is 9091. This can be change setting the new port in the property *server.port* in *application.properties*
+Default port is 9091. This can be changed setting the new port in the property *server.port* in *application.properties*
 
 ## Run the project
 
