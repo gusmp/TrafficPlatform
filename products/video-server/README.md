@@ -76,7 +76,7 @@ Run the module with:
 
 #### Request header
 
-|               |              |
+| Property      | Value        |
 | :------------ |:-------------|
 | URL           | http://SERVER_NAME:SERVER_PORT/vs/add |
 | Type          | POST                                  |
@@ -85,7 +85,7 @@ Run the module with:
 #### Request body
 
 | Property      | Description   |
-| :------------ |:-------------|
+| :------------ |:--------------|
 | name                   |  name of the video source |
 | enableVideoSource      |  this video source is active or not |
 | enableSaveVideo        |  save to disk the video comming from the camera  |
@@ -101,13 +101,13 @@ Example:
 
 ```
 {
-    "name" : "MY_SOURCE_VIDEO",
+    "name" : "MY_SOURCE_VIDEO_NAME",
     "enableVideoSource": true,
     "enableSaveVideo": true,
     "url" : "http://my_camera_url",
     "removeOldData" : false,
     "numberOfDaysToPreserve" : 30,
-    "rootCapturePath" : "/path/store/data/MY_SOURCE_VIDEO",
+    "rootCapturePath" : "/path/store/data/MY_SOURCE_VIDEO_NAME",
     "rootConsolidatedPath" : "/path/store/data/MY_SOURCE_VIDEO_CONS",
     "videoCaptureType" : "OPENCV"
 }
@@ -126,7 +126,7 @@ Example:
 
 #### Request header
 
-|               |              |
+| Property      | Value        |
 | :------------ |:-------------|
 | URL           | http://SERVER_NAME:SERVER_PORT/vs/update |
 | Type          | POST                                     |
@@ -151,13 +151,13 @@ Example:
 
 ```
 {
-    "name" : "MY_SOURCE_VIDEO",
+    "name" : "MY_SOURCE_VIDEO_NAME",
     "enableVideoSource": true,
     "enableSaveVideo": true,
     "url" : "http://my_camera_url",
     "removeOldData" : false,
     "numberOfDaysToPreserve" : 30,
-    "rootCapturePath" : "/path/store/data/MY_SOURCE_VIDEO",
+    "rootCapturePath" : "/path/store/data/MY_SOURCE_VIDEO_NAME",
     "rootConsolidatedPath" : "/path/store/data/MY_SOURCE_VIDEO_CONS",
     "videoCaptureType" : "OPENCV"
 }
@@ -177,9 +177,9 @@ Example:
 
 #### Request header
 
-|               |              |
+| Property      | Value        |
 | :------------ |:-------------|
-| URL (only one)| http://SERVER_NAME:SERVER_PORT/vs/list/SOURCE_NAME |
+| URL (only one)| http://SERVER_NAME:SERVER_PORT/vs/list/VIDEO_SOURCE_NAME |
 | URL (all)     | http://SERVER_NAME:SERVER_PORT/vs/list |
 | Type          | GET                              |
 
@@ -207,10 +207,10 @@ An array of video sources with the details.
 
 ### Enable / disable a video source
 
-|               |              |
+| Property      | Value        |
 | :------------ |:-------------|
-| URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/SOURCE_NAME/true |
-| URL (disable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/SOURCE_NAME/false |
+| URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/VIDEO_SOURCE_NAME/true |
+| URL (disable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/VIDEO_SOURCE_NAME/false |
 | Type          | GET                              |
 
 
@@ -227,9 +227,9 @@ An array of video sources with the details.
 
 #### Request header
 
-|               |              |
+| Property      | Value        |
 | :------------ |:-------------|
-| URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/delete/SOURCE_NAME |
+| URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/delete/VIDEO_SOURCE_NAME |
 | Type          | POST                               |
 | Content-Type  | application/json                   |
 
@@ -243,6 +243,122 @@ An array of video sources with the details.
 | message       | Text message of the operation  |
 
 ## Get image / video
+
+### Enable / disable save video into disk
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL (enable)          | http://SERVER_NAME:SERVER_PORT/video/enableSaveVideo/VIDEO_SOURCE_NAME/true |
+| URL (disable)          | http://SERVER_NAME:SERVER_PORT/video/enableSaveVideo/VIDEO_SOURCE_NAME/false |
+| Type          | GET                                     |
+
+#### Response body
+
+| Property      | Description  |
+| :------------ |:-------------|
+| success       | Boolean. True if the request was execute successfully or false if there was an error      |
+| errorCode     | Integer. Code of error         |
+| message       | Text message of the operation  |
+
+
+### Get current video
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/video/currentVideo/VIDEO_SOURCE_NAME/width/height |
+| Type          | GET                                     |
+
+Where *width* and *height* are optional.
+
+#### Response body
+
+This endpoint returns a stream whose content type is *multipart/x-mixed-replace*. The content is a endless sequence of images in jpeg format.
+
+The fps depends on the source and the hardware resources for  video-server.
+
+
+### Get current image
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/video/currentImage/VIDEO_SOURCE_NAME |
+| Type          | GET                                     |
+
+
+#### Response body
+
+This endpoint returns an image in jpeg format (image/jpeg)
+
+
+### Get video (frame stream)
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/video/getFrames/VIDEO_SOURCE_NAME/start/end |
+| URL           | http://SERVER_NAME:SERVER_PORT/video/getFrames/VIDEO_SOURCE_NAME/start/end/fps |
+| URL           | http://SERVER_NAME:SERVER_PORT/video/getFrames/VIDEO_SOURCE_NAME/start/end/fps/width/height |
+| Type          | GET                                     |
+
+Where:
+
+* start: start timestamp in format YYYYMMDDhhMMss.
+* end: end timestamp in format YYYYMMDDhhMMss.
+* fps: frame per second.
+* width: desired width.
+* height desired height.
+
+#### Response body
+
+Returns a *multipart/x-mixed-replace* response based on a sequence of jpeg images.
+
+### Get video (mp4 stream)
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/video/getVideo/VIDEO_SOURCE_NAME/start/end |
+| URL           | http://SERVER_NAME:SERVER_PORT/video/getVideo/VIDEO_SOURCE_NAME/start/end/fps |
+| URL           | http://SERVER_NAME:SERVER_PORT/video/getVideo/VIDEO_SOURCE_NAME/start/end/fps/width/height |
+| Type          | GET                                     |
+
+Where:
+
+* start: start timestamp in format YYYYMMDDhhMMss.
+* end: end timestamp in format YYYYMMDDhhMMss.
+* fps: frame per second.
+* width: desired width.
+* height desired height.
+
+#### Response body
+
+Returns an mp3 video.
+
+
+### Delete video
+
+#### Request header
+
+| Property      | Value        |
+| :------------ |:-------------|
+| URL           | http://SERVER_NAME:SERVER_PORT/video/delete/VIDEO_SOURCE_NAME/start/end |
+| Type          | GET                                     |
+
+#### Response body
+
+| Property      | Description  |
+| :------------ |:-------------|
+| success       | Boolean. True if the request was execute successfully or false if there was an error |
+| errorCode     | Integer. Code of error                |
+| message       | Text message of the operation         |
 
 ## Consolidate videos
 
