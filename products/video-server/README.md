@@ -81,7 +81,6 @@ Run the module with:
 | URL           | http://SERVER_NAME:SERVER_PORT/vs/add |
 | Type          | POST                                  |
 | Content-Type  | application/json                      |
-|               |                                       |
 
 #### Request body
 
@@ -120,7 +119,6 @@ Example:
 | success       | Boolean. True if the request was execute successfully or false if there was an error |
 | errorCode     | Integer. Code of error                |
 | message       | Text message of the operation         |
-|               |                                       |
 
 ### Update video source
 
@@ -133,7 +131,6 @@ Example:
 | URL           | http://SERVER_NAME:SERVER_PORT/vs/update |
 | Type          | POST                                     |
 | Content-Type  | application/json                         |
-|               |                                          |
 
 #### Request body
 
@@ -173,7 +170,6 @@ Example:
 | success       | Boolean. True if the request was execute successfully or false if there was an error |
 | errorCode     | Integer. Code of error                |
 | message       | Text message of the operation         |
-|               |                                       |
 
 
 
@@ -216,7 +212,6 @@ An array of video sources with the details.
 | URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/SOURCE_NAME/true |
 | URL (disable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/SOURCE_NAME/false |
 | Type          | GET                              |
-|               |                                  |
 
 
 #### Response body
@@ -226,8 +221,6 @@ An array of video sources with the details.
 | success       | Boolean. True if the request was execute successfully or false if there was an error |
 | errorCode     | Integer. Code of error                |
 | message       | Text message of the operation         |
-|               |                                       |
-
 
 
 ### Delete video source
@@ -239,7 +232,6 @@ An array of video sources with the details.
 | URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/delete/SOURCE_NAME |
 | Type          | POST                               |
 | Content-Type  | application/json                   |
-|               |                                    |
 
 
 #### Response body
@@ -249,7 +241,6 @@ An array of video sources with the details.
 | success       | Boolean. True if the request was execute successfully or false if there was an error      |
 | errorCode     | Integer. Code of error         |
 | message       | Text message of the operation  |
-|               |                                |
 
 ## Get image / video
 
