@@ -22,7 +22,7 @@ You might want to create a specific user:
 
 ## Basic configuration
 
-1. Duplicate the file *<YOUR_PATH>\TrafficPlatform\products\video-server\src\main\resources\application-template.properties*. Example application-**myinst**.properties
+1. Duplicate the file *<YOUR_PATH>\TrafficPlatform\products\mosaic-server\src\main\resources\application-template.properties*. Example application-**myinst**.properties
 
 2. Edit the file *application-myinst.properties*
 3. Replace the place holders <MYSQL_*> with your own data
@@ -234,7 +234,7 @@ Example:
 
 ### Get a mosaic
 
-**NOTE:** This endpoint returns the image, not the detils of the mosaic.
+**NOTE:** This endpoint returns the image, not the details of the mosaic.
 
 #### Request header
 
@@ -245,7 +245,7 @@ Example:
 
 
 
-Where *columns* is the nomber of columns of the mosaic. For example, if you have a mosaic make up by 6 input source and *columns* has the value of 2, then the mosaic produced has 3 rows and 2 columns (3 x 2 = 6)
+Where *columns* is the number of columns of the mosaic. For example, if you have a mosaic make up by 6 input sources and *columns* has the value of 2, then the mosaic produced has 3 rows and 2 columns (3 x 2 = 6)
 
 #### Response body
 
