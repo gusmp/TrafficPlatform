@@ -16,6 +16,7 @@ This project has been written in Java. You will need:
 
 * JDK installation. I am using OpenJDK 15.0.1.
 * Maven. I use 3.3.3 version.
+* Mysql server.
 
 On top of that, this project requires OpenCV. I have been using the versions:
 * 4.5.1
@@ -70,15 +71,29 @@ With your JDK and maven bin folder in your PATH varible just type inside the fol
 
 *mvn clean package*
 
-With this command, the folders *<YOUR_PATH>\TrafficPlatform\products\<MODULE>\targer\* contains a file with name *<MODULE_NAME>.jar* which is the module compiled, ready to be executed.
+With this command, the folders *<YOUR_PATH>\TrafficPlatform\products\<MODULE>\target\* contains a file with name *<MODULE_NAME>.jar* which is the module compiled, ready to be executed.
+
+```
+[INFO] Reactor Summary:
+[INFO]
+[INFO] traffic-platform ................................... SUCCESS [  0.515 s]
+[INFO] openCvLib .......................................... SUCCESS [  7.632 s]
+[INFO] imageLib ........................................... SUCCESS [  1.190 s]
+[INFO] video-server ....................................... SUCCESS [ 24.920 s]
+[INFO] mosaic-server ...................................... SUCCESS [  2.395 s]
+[INFO] anpr-server ........................................ SUCCESS [  4.844 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+```
 
 ## List of modules
 
 Nowadays, there are three modules:
 
-* Video-Server: a simple video management service (VMS).
-* Mosaic-Server: allow to create a single image from diferent sources.
-* Anpr-Server: a bridge to access to several automatic number-plate recognition.
+* Video-Server: a simple video management service (VMS). More information in [this link](./products/video-server/README.md).
+* Mosaic-Server: allow to create a single image from diferent sources. More information in [this link](./products/mosaic-server/README.md).
+* Anpr-Server: a bridge to access to several automatic number-plate recognition. More information in [this link](./products/anpr-server/README.md).
 
 
 
