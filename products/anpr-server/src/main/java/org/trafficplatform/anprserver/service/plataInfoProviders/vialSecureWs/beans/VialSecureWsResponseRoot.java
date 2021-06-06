@@ -1,4 +1,4 @@
-package org.trafficplatform.anprserver.service.plataInfoProviders.carmenws.beans;
+package org.trafficplatform.anprserver.service.plataInfoProviders.vialSecureWs.beans;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CarmenWsResponseRoot {
+public class VialSecureWsResponseRoot {
 
 	private boolean success;
 	private String errorCode;
@@ -15,7 +15,7 @@ public class CarmenWsResponseRoot {
 	private String exceptionMessage;
 	private String exceptionTrace;
 	
-	private CarmenWsResponseAtrribute response;
+	private VialSecureWsResponseAtrribute response;
 	
 	
 }

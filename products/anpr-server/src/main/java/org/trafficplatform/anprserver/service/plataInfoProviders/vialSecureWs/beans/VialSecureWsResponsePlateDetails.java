@@ -1,4 +1,4 @@
-package org.trafficplatform.anprserver.service.plataInfoProviders.carmenws.beans;
+package org.trafficplatform.anprserver.service.plataInfoProviders.vialSecureWs.beans;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CarmenWsResponsePlateDetails {
+public class VialSecureWsResponsePlateDetails {
 
 	private String matricula;
 	private int x1,y1;

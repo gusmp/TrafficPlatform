@@ -1,4 +1,4 @@
-package org.trafficplatform.anprserver.service.plataInfoProviders.carmenws.beans;
+package org.trafficplatform.anprserver.service.plataInfoProviders.vialSecureWs.beans;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CarmenWsRequestImage {
+public class VialSecureWsRequestImage {
 
 	private String id;
 	private String imagen;

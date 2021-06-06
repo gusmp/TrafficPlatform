@@ -1,4 +1,4 @@
-package org.trafficplatform.anprserver.service.plataInfoProviders.carmenws.beans;
+package org.trafficplatform.anprserver.service.plataInfoProviders.vialSecureWs.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +10,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CarmenWsRequest {
+public class VialSecureWsRequest {
 
 	private String usuario;
 	private String password;
 	private String invocante;
-	private List<CarmenWsRequestImage> imagenes = new ArrayList<CarmenWsRequestImage>();
+	private List<VialSecureWsRequestImage> imagenes = new ArrayList<VialSecureWsRequestImage>();
 	
 }
