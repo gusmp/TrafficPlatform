@@ -5,13 +5,13 @@ public enum PlateInfoProvider {
 	DUMMY(AnprProviderNames.DUMMY),
 	ANPR_CLOUD_ANPR(AnprProviderNames.ANPR_CLOUD_ANPR),
 	ANPR_CLOUD_MMR(AnprProviderNames.ANPR_CLOUD_MMR),
-	CARMENWS(AnprProviderNames.CARMENWS);
+	VIALSECUREWS(AnprProviderNames.VIALSECUREWS);
 	
 	public class AnprProviderNames{
         public static final String DUMMY = "DUMMY";
         public static final String ANPR_CLOUD_ANPR = "ANPR_CLOUD_ANPR";
         public static final String ANPR_CLOUD_MMR = "ANPR_CLOUD_MMR";
-        public static final String CARMENWS = "CARMENWS";
+        public static final String VIALSECUREWS = "VIALSECUREWS";
     }
 	 
 	private final String anprProviderName;
