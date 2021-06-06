@@ -68,7 +68,7 @@ Once these changes have been done:
 
 Run the module with:
 
-*java -D -Djava.library.path=<YOU_PATH_OPENCV_LIBS> -jar video-server-<VERSION>.jar*
+*java -D -Djava.library.path=<YOU_PATH_OPENCV_LIBS> -jar video-server-VERSION.jar*
 
 ## Management of video source
 
@@ -77,7 +77,7 @@ Run the module with:
 #### Request header
 
 |               |              |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | URL           | http://SERVER_NAME:SERVER_PORT/vs/add |
 | Type          | POST                                  |
 | Content-Type  | application/json                      |
@@ -86,7 +86,7 @@ Run the module with:
 #### Request body
 
 | Property      | Description   |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | name                   |  name of the video source |
 | enableVideoSource      |  this video source is active or not |
 | enableSaveVideo        |  save to disk the video comming from the camera  |
@@ -116,7 +116,7 @@ Example:
 #### Response body
 
 | Property      | Description  |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | success       | Boolean. True if the request was execute successfully or false if there was an error |
 | errorCode     | Integer. Code of error                |
 | message       | Text message of the operation         |
@@ -129,7 +129,7 @@ Example:
 #### Request header
 
 |               |              |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | URL           | http://SERVER_NAME:SERVER_PORT/vs/update |
 | Type          | POST                                     |
 | Content-Type  | application/json                         |
@@ -137,8 +137,8 @@ Example:
 
 #### Request body
 
-| Property      | Description   |
-| ------------- |:-------------|
+| Property      | Description  |
+| :------------ |:-------------|
 | name                   |  name of the video source |
 | enableVideoSource      |  this video source is active or not |
 | enableSaveVideo        |  save to disk the video comming from the camera  |
@@ -169,7 +169,7 @@ Example:
 #### Response body
 
 | Property      | Description  |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | success       | Boolean. True if the request was execute successfully or false if there was an error |
 | errorCode     | Integer. Code of error                |
 | message       | Text message of the operation         |
@@ -182,7 +182,7 @@ Example:
 #### Request header
 
 |               |              |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | URL (only one)| http://SERVER_NAME:SERVER_PORT/vs/list/SOURCE_NAME |
 | URL (all)     | http://SERVER_NAME:SERVER_PORT/vs/list |
 | Type          | GET                              |
@@ -212,7 +212,7 @@ An array of video sources with the details.
 ### Enable / disable a video source
 
 |               |              |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/SOURCE_NAME/true |
 | URL (disable)| http://SERVER_NAME:SERVER_PORT/vs/enableVideoSource/SOURCE_NAME/false |
 | Type          | GET                              |
@@ -222,7 +222,7 @@ An array of video sources with the details.
 #### Response body
 
 | Property      | Description  |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | success       | Boolean. True if the request was execute successfully or false if there was an error |
 | errorCode     | Integer. Code of error                |
 | message       | Text message of the operation         |
@@ -235,7 +235,7 @@ An array of video sources with the details.
 #### Request header
 
 |               |              |
-| ------------- |:-------------|
+| :------------ |:-------------|
 | URL (enable)| http://SERVER_NAME:SERVER_PORT/vs/delete/SOURCE_NAME |
 | Type          | POST                               |
 | Content-Type  | application/json                   |
@@ -245,11 +245,11 @@ An array of video sources with the details.
 #### Response body
 
 | Property      | Description  |
-| ------------- |:-------------|
-| success       | Boolean. True if the request was execute successfully or false if there was an error |
-| errorCode     | Integer. Code of error                |
-| message       | Text message of the operation         |
-|  
+| :------------ |:-------------|
+| success       | Boolean. True if the request was execute successfully or false if there was an error      |
+| errorCode     | Integer. Code of error         |
+| message       | Text message of the operation  |
+|               |                                |
 
 ## Get image / video
 
