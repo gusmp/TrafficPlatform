@@ -68,6 +68,7 @@ public class VideoCaptureOpenCvImagesService extends VideoCaptureBase {
 		long numberFrames = 0;
 		long startTime = System.currentTimeMillis();
 		boolean readError = false;
+		boolean imageRead = false;
 		
 		this.currentImage = new Mat();	
 		
@@ -76,11 +77,12 @@ public class VideoCaptureOpenCvImagesService extends VideoCaptureBase {
 			
 			currentImageReady.lock();
 			
-			this.videoCapture.read(this.currentImage);
+			imageRead = this.videoCapture.read(this.currentImage);
 			numberFrames++;
 			readError = false;
 			
-			if ((this.currentImage.size().height == 0.0) || (this.currentImage.size().width == 0.0)) {
+			//if ((this.currentImage.size().height == 0.0) || (this.currentImage.size().width == 0.0)) {
+			if (imageRead == false) {
 				log.error(LogUtils.formatSourceName(this.videoSource.getName())  + "Error retreaving the image from source " + this.videoSource.getUrl());
 				
 				this.currentImage = ImageUtils.resize(errorImage, errorImageWidth, errorImageHeight);
@@ -91,7 +93,10 @@ public class VideoCaptureOpenCvImagesService extends VideoCaptureBase {
 			currentImageReady.unlock();
 			
 			if (readError == true) {
-				try { Thread.sleep(errorDelayInMs); } catch(Exception exc) {}
+				try { 
+					Thread.sleep(errorDelayInMs);
+					this.videoCapture = openCamera(this.videoCapture, this.videoSource.getUrl());
+				} catch(Exception exc) {}
 			}
 			
 			
