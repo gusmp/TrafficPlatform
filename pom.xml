@@ -39,6 +39,7 @@
 		<module>products/video-server</module>
 		<module>products/mosaic-server</module>
 		<module>products/anpr-server</module>
+		<module>products/platform-ui</module>
 	</modules>
 
 

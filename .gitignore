@@ -30,5 +30,6 @@ docs/scripts/*
 /products/mosaic-server/src/main/resources/application-mysql*.properties
 /products/video-server/src/main/resources/application-mysql*.properties
 /products/video-server/src/main/resources/application-hsql*.properties
+/products/platform-ui/src/main/resources/application-mysql*.properties
 
-
+products/platform-ui/data/vehicle/yolov4/yolov4.weights
